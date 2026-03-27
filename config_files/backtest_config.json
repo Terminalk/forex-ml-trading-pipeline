@@ -1,0 +1,36 @@
+{
+    "start_hour": "9:00:00",
+    "end_hour": "17:00:00",
+    "tp": 50.0,
+    "sl": 25.0,
+    "pip_value": 0.0001,
+    "default_spread": 1.0,
+    "max_open_positions": 5,
+    "input_folder": "processed_data",
+    "file_name": "test_scaled_with_predictions.parquet",
+    "results_folder": "results",
+    "trade_days": [0, 1, 2, 3, 4],
+    "buy_allow": 1,
+    "sell_allow": 1,
+    "required_columns": ["open", "high", "low", "close", "spread", "EMA_200"],
+    "signal_column": "predicted_signal",
+    "data_ranges": [
+        ["2024-04-01", "2024-07-31", "optuna_validation"],
+        ["2024-04-01", "2024-04-30", "results_april"],
+        ["2024-05-01", "2024-05-31", "results_may"],
+        ["2024-06-01", "2024-06-30", "results_june"],
+        ["2024-07-01", "2024-07-31", "results_july"],
+        ["2024-08-01", "2024-08-31", "results_august"],
+        ["2024-09-01", "2024-09-30", "results_september"],
+        ["2024-10-01", "2024-10-31", "results_october"],
+        ["2024-11-01", "2024-11-30", "results_november"],
+        ["2024-12-01", "2024-12-31", "results_december"]
+    ],
+
+    "trend_criteria": {
+        "use_price_change": false,
+        "use_sma_cross": false,
+        "use_candle_ratio": false,
+        "use_ema_position": false
+    }
+}

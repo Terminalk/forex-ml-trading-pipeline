@@ -1,0 +1,33 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "mt5.TIMEFRAME_H1",
+  "output_folder": "original_data",
+  "log_folder": "logs",
+  "log_file": "data_download_and_label.log",
+  "train": {
+    "start": {"year": 2020, "month": 1, "day": 1},
+    "end": {"year": 2023, "month": 12, "day": 31},
+    "filename": "train.parquet"
+  },
+  "validation": {
+    "start": {"year": 2024, "month": 1, "day": 1},
+    "end": {"year": 2024, "month": 3, "day": 31},
+    "filename": "validation.parquet"
+  },
+  "test": {
+    "start": {"year": 2024, "month": 4, "day": 1},
+    "end": {"year": 2024, "month": 12, "day": 31},
+    "filename": "test.parquet"
+  },
+  "collect_data": true,
+  "input_data_folder": "original_data",
+  "train_file": "train.parquet",
+  "validation_file": "validation.parquet",
+  "test_file": "test.parquet",
+  "final_tp_pips": 50,
+  "sl_pips": 25,
+  "pip_value": 0.0001,
+  "default_spread_pips": 1.0,
+  "use_max_candles_duration": false,
+  "max_candles_duration": 100
+}

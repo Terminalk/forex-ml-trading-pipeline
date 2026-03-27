@@ -1,0 +1,55 @@
+{
+  "data": {
+    "processed_data_dir": "processed_data",
+    "test_file": "test_scaled.parquet",
+    "train_file": "train_scaled.parquet",
+    "validation_file": "validation_scaled.parquet"
+  },
+  "logging": {
+    "log_dir": "logs",
+    "log_file": "train_model.log"
+  },
+  "model": {
+    "early_stopping_rounds": 40,
+    "features": [
+      "Bull_Key_Reversal_lag1",
+      "ROC_Deceleration_20",
+      "Amihud_Illiquidity_50",
+      "Price_Autocorr_Lag1",
+      "Volatility_Spike_lag1",
+      "MeanReversion_100_lag1",
+      "Spread_Zscore_20_lag3",
+      "Reversal_Indicator_5_lag2",
+      "Spread_MA_20_lag2",
+      "Amihud_Illiquidity_20_lag3",
+      "Tick_Direction_lag2",
+      "Volatility_MA",
+      "Reversal_Indicator_3_lag3",
+      "Delta_Divergence",
+      "Dist_From_PP_lag2",
+      "Consecutive_Up_lag1"
+    ],
+    "output_name": "model_xgboost_EURUSD.pkl",
+    "params": {
+      "n_estimators": 100,
+      "max_depth": 10,
+      "learning_rate": 0.01,
+      "subsample": 0.8,
+      "colsample_bytree": 0.5,
+      "colsample_bylevel": 0.5,
+      "colsample_bynode": 0.9,
+      "gamma": 9.6,
+      "min_child_weight": 17,
+      "reg_alpha": 3.04,
+      "reg_lambda": 0.9,
+      "max_leaves": 34,
+      "n_jobs": -1,
+      "num_class": 3,
+      "objective": "multi:softmax",
+      "random_state": 42,
+      "grow_policy": "depthwise"
+    },
+    "signal_weight_multiplier": 1.0,
+    "window_size": 16
+  }
+}
